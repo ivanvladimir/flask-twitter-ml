@@ -1,0 +1,32 @@
+{% extends "default.html" %}
+
+{% block title %}Menú principal {%endblock%}
+
+{% block content %}
+
+<div class="row">
+    <div class="twelve columns">
+	<h3>Twitter + ML</h3>
+</div>
+</div>
+
+<form>
+  <div class="row">
+    <div class="six columns">
+      <label for="exampleEmailInput">Escribe una query a twitter</label>
+      <input class="u-full-width" type="email" placeholder="#pokemon" id="querytext">
+    </div>
+  </div>
+  <input class="button-primary" type="submit" value="Submit">
+</form>
+
+<h2>Resultados</h2>
+
+<ul>
+	{% for tweet in tweets %}
+	<li>{{ tweet[0]}}<br/>
+		clase {{tweet[1]}}</li>
+	{% endfor %}
+</ul>
+
+{%endblock%}

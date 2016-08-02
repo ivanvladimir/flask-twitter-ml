@@ -1,0 +1,26 @@
+{% extends "default.html" %}
+
+{% block title %}Menú principal {%endblock%}
+
+{% block content %}
+
+<div class="row">
+    <div class="twelve columns">
+	<h3>Twitter + ML</h3>
+	<p>Esta es una muestra de lo que se puede hacer con ML sobre twitter</p>
+</div>
+</div>
+
+
+
+<form action="/" method="post">
+  <div class="row">
+    <div class="six columns">
+      <label for="exampleEmailInput">Escribe una query a twitter</label>
+      <input class="u-full-width" type="text" placeholder="#pokemon" name="querytext">
+    </div>
+  </div>
+  <input class="button-primary" type="submit" value="Submit">
+</form>
+
+{%endblock%}
